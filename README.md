@@ -84,4 +84,3 @@ and logical-or (`||`). Logical-and has higher precedence than logical-or in Java
 - Replace the instances of `<operator>` with the appropriate operator.
 - `Execute the file` and make any other needed changes to execute properly.
   (Make sure that you get the results indicated in the line comments)
-- `Run the predefined tests` (click Tests icon in the left column under Tools) and correct any logic errors. 
