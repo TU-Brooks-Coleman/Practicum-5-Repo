@@ -14,13 +14,13 @@ class Main {
     // type matching
     var1 = 10;    
     var2 = 10.00;  
-    var3 = <operator>var2;  // var3 should be 10 (integer value)
+    var3 = (int) var2;  // var3 should be 10 (integer value)
 
     //complementary operations of mod and integer div
     // -- replace <operator> with the appropriate unary operator
     year = 2023;
-    two_digit_century = 2023 <operator> 100;  // should be assigned 20 (int)
-    two_digit_year = 2023 <operator> 100;  // should be assigned 23 (int)
+    two_digit_century = 2023 / 100;  // should be assigned 20 (int)
+    two_digit_year = 2023 % 100;  // should be assigned 23 (int)
     
     // mixed-type expressions
     // -- make any necessary changes to the operands below
@@ -28,10 +28,10 @@ class Main {
     var4 = 5.0;
     var5 = 10.0;
     var6 = var4 + var5;  // var6 should be 15.0 (float)
-    var7 = var4 + var5;  // var7 should be 15 (int)
+    var7 = (int) (var4 + var5);  // var7 should be 15 (int)
     
     // operator precedence
-    var8 = 2 + 3 * 4;  // var8 should be 20 (int)
+    var8 = (2 + 3) * 4;  // var8 should be 20 (int)
     var9 = 2 + 3 * 4;  // var9 should be 14 (int)
     
     // Boolean expressions
@@ -41,9 +41,9 @@ class Main {
     var10 = -1;
     var11 = -10;
     var12 = false;
-    var13 = !var10 > 0;  // var13 should be true
-    var14 = var12 && (var10 > -1 || var10 > var11);  // var14 should be true 
-    var15 = var10 == -1 && var12 || var10 > var11; // var15 should be true
+    var13 = !(var10 > 0);  // var13 should be true
+    var14 = !(var12) && (var10 > -1 || var10 > var11);  // var14 should be true 
+    var15 = (var10 == -1) && (var12 || var10 > var11); // var15 should be true    
 
     // displayResults
     System.out.println("var3 = " + var3);
@@ -54,5 +54,7 @@ class Main {
     System.out.println("var13 = " + var13);
     System.out.println("var14 = " + var14);
     System.out.println("var15 = " + var15);
+    System.out.println("two digit century = " + two_digit_century);
+    System.out.println("two digit year = " + two_digit_year);
   }
 }
